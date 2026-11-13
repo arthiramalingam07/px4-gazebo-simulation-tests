@@ -39,31 +39,5 @@ x     SIM_BAT3_MIN_PCT [910,1515] : -1.0000
 x     SIM_BAT_DRAIN [911,1516] : 60.0000
 x +   SIM_BAT_MIN_PCT [912,1517] : 5.0000
 
-param show SIM_BAT_*
 param set SIM_BAT_DRAIN 60.0
-
-Path to local -\\wsl.localhost\Ubuntu\home\rthi\PX4-Autopilot\Tools\simulation\gz
-Path to Logs -\\wsl.localhost\Ubuntu\home\rthi\PX4-Autopilot\build\px4_sitl_default\rootfs\fs\log
-
-wind file :nano ~/PX4-Autopilot/Tools/simulation/gz/worlds/windy.sdf
-
-To launch PX4 ,cd PX4-Autopilot
-make px4_sitl gz_x500
-
-To view UI
-gz sim -g
-
-cd ~/PX4-Autopilot && PX4_GZ_WORLD=windy make px4_sitl gz_x500
-
-Delete Logs
-cd ~/PX4-Autopilot
-rm -f logs/*.ulg
-find ~ -type f -name "*.ulg" -delete
-
-List of log files 
-find ~ -type f -name "*.ulg"
-
-Wind world file : nano Tools/simulation/gz/worlds/windy.sdf
-Default world file : 
-
-copy text from nano : grep -A 12 -B 2 '<wind>' ~/PX4-Autopilot/Tools/simulation/gz/worlds/windy.sdf
+ 2 '<wind>' ~/PX4-Autopilot/Tools/simulation/gz/worlds/windy.sdf
